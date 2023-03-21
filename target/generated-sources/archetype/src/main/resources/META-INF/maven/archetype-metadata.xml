@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="expel-proyecto"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.gitignore</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <modules>
+    <module id="expel-application" dir="expel-application" name="expel-application" />
+    <module id="expel-container" dir="expel-container" name="expel-container" />
+    <module id="expel-dataaccess" dir="expel-dataaccess" name="expel-dataaccess" />
+    <module id="expel-domain" dir="expel-domain" name="expel-domain">
+      <modules>
+        <module id="expel-application-service" dir="expel-application-service" name="expel-application-service" />
+        <module id="expel-domain-core" dir="expel-domain-core" name="expel-domain-core" />
+      </modules>
+    </module>
+    <module id="expel-messaging" dir="expel-messaging" name="expel-messaging" />
+  </modules>
+</archetype-descriptor>
